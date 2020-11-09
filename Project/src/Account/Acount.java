@@ -1,0 +1,21 @@
+package Account;
+import java.util.*;
+
+public class Acount {
+	
+	private int balance; //ÀÜ¾×
+	private int previousTransaction; //Àü °Å·¡ ³»¿ª
+	private String customerName; //°í°´¸í
+	private String customerId; //°í°´ID
+	
+	private Scanner scan = new Scanner(System.in);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
