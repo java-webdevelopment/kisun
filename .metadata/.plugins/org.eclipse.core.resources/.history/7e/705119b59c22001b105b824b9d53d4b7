@@ -1,0 +1,32 @@
+
+import java.util.*;
+import Account.Acount;
+public class BankMain {
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		List<Acount> list = new ArrayList<>();
+	
+		while(true) {		
+			System.out.printf("메뉴 입력: ");
+			BankingApplication.menuInfo();
+			String str = scan.nextLine();
+			str.toLowerCase();
+			char n = str.charAt(0);
+			switch(n) {
+				case '1':
+					BankingApplication.createId(list);
+					break;
+				case '2':
+					BankingApplication.deposit();
+					break;
+				case '3':
+					BankingApplication.withdraw();
+					break;
+				case '4':
+					BankingApplication.previousTransaction();
+					break;
+			}
+		}
+	}
+}

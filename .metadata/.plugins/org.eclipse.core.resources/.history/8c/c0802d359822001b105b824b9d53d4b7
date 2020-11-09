@@ -1,0 +1,36 @@
+
+import java.util.*;
+
+import Account.Acount;
+import java.util.*;
+
+public class BankingApplication extends Acount{
+	
+	Scanner scan = new Scanner(System.in);
+	
+	public static void createId(List<BankingApplication>) {
+		
+	}
+	public static void deposit() {
+		
+	}
+	public static void withdraw() {
+		
+	}
+	public static void previousTransaction() {
+		
+	}
+	
+	
+	public static void menuInfo() {
+		System.out.println("1.계정생성");
+		System.out.println("2.입금");
+		System.out.println("3.출금");
+		System.out.println("4.전 거래내역");
+		System.out.println("5.계정삭제");
+		System.out.println("6.exit");
+	}
+	
+	
+	
+}
