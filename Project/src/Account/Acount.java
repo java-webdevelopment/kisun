@@ -34,6 +34,10 @@ public class Acount {
 	public void setSubBalance(int balance) {
 		this.balance -= balance;
 	}
+	
+	public int balanceSearch() {
+		return balance;
+	}
 		
 	public String getPreviousTransaction() {
 		return previousTransaction;

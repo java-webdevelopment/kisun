@@ -5,7 +5,7 @@ public class BankMain {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		Map<String,String> map = new HashMap<>();
+		List<Acount> list = new ArrayList<>();
 	
 		while(true) {		
 			System.out.println("=================================");
@@ -17,13 +17,13 @@ public class BankMain {
 			char n = str.charAt(0);
 			switch(n) {
 				case '1':
-					BankingApplication.createId(map);
+					BankingApplication.createId(list);
 					break;
 				case '2':
-					BankingApplication.deposit();
+					BankingApplication.deposit(list);
 					break;
 				case '3':
-					BankingApplication.withdraw();
+					BankingApplication.withdraw(list);
 					break;
 				case '4':
 					BankingApplication.previousTransaction();

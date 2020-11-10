@@ -1,0 +1,74 @@
+
+
+import Account.Acount;
+import java.util.*;
+
+public class BankingApplication extends Acount{
+	static Acount user = new Acount();
+	static Scanner scan = new Scanner(System.in);
+
+	public static void createId(Map<String, String> map) {
+		
+		user.userAdd();
+		map.put(user.getCustomerId(), user.getCustomerPw());
+	}
+	public static void deposit(Map<String, String> map) {
+		System.out.printf("이름: ");
+		String id = scan.nextLine();
+			if (map.containsKey(id)) {
+				System.out.printf("패스워드: ");
+				String pw = scan.nextLine();
+				if (pw.equals(map.get(id))) {
+					System.out.println("로그인 성공!");
+					System.out.printf("입금금액: ");
+					user.setAddBalance(scan.nextInt());
+				}else {
+					System.out.println("패스워드가 틀렸습니다.");
+				}
+			}else {
+				System.out.println("없는 ID 입니다.");
+			}
+		}		
+	
+
+	public static void withdraw(Map<String, String> map) {
+		System.out.printf("이름: ");
+		String id = scan.nextLine();
+			if (map.containsKey(id)) {
+				System.out.printf("패스워드: ");
+				String pw = scan.nextLine();
+				if (pw.equals(map.get(id))) {
+					System.out.println("로그인 성공!");
+					System.out.printf("출금금액: ");
+					user.setSubBalance(scan.nextInt());
+					System.out.println("잔액: "+user.balanceSearch());
+				}else {
+					System.out.println("패스워드가 틀렸습니다.");
+				}
+			}else {
+				System.out.println("없는 ID 입니다.");
+			}
+		}
+
+	public static void previousTransaction() {
+
+	}
+	public static void infoUser() {
+
+	}	
+	public static void deleteUser() {
+
+	}
+
+public static void menuInfo() {
+	System.out.println("1.계정생성");
+	System.out.println("2.입금");
+	System.out.println("3.출금");
+	System.out.println("4.전 거래내역");
+	System.out.println("5.계정삭제");
+	System.out.println("6.exit");
+}
+
+
+
+}

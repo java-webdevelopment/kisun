@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Acount {
+	
+	private int balance; //≈Î¿Â
+	private int previousTransaction; //
+	private String customerName; //∞Ì∞¥∏Ì
+	private String customerId; //∞Ì∞¥ID
+	
+	Scanner scan = new Scanner(System.in);
+	List<String, String> list = new ArraysList<>();
+	
+	
+	
+	
+	
+}
