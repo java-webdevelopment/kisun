@@ -26,11 +26,7 @@ public class BankMain {
 					BankingApplication.withdraw(list);
 					break;
 				case '4':
-					BankingApplication.previousTransaction(list);
-					break;
-				case '5':					
-					System.exit(0);
-					scan.close();
+					BankingApplication.previousTransaction();
 					break;
 			}
 		}

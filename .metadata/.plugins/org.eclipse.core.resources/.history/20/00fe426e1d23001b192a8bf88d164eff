@@ -1,4 +1,5 @@
 
+
 import Account.Acount;
 import java.util.*;
 
@@ -28,7 +29,7 @@ public class BankingApplication extends Acount{
 					n.setAddBalance(money);
 					scan.nextLine();
 					System.out.println("입금액: "+money);
-					n.setPreviousTransaction(n.getCustomerId()+"님 전 거래내역 (입금): "+money);
+					n.setPreviousTransaction("2020.11.10 입금: "+money);
 					check = false;
 					break;
 				}else {
@@ -63,21 +64,19 @@ public class BankingApplication extends Acount{
 					if(n.balanceSearch() >= 0) {
 						System.out.println("출금금액: "+money);
 						System.out.println("출금 후 잔액: "+n.balanceSearch());
-						n.setPreviousTransaction(n.getCustomerId()+"님 전 거래내역 (출금): "+money);
+						n.setPreviousTransaction("2020.11.10 출금: "+money);
 						check = false;
 						break;
 					}else {
 						n.setAddBalance(money);
 						System.out.println("잔액이 부족 합니다.");
 						System.out.println("남은잔액: "+n.balanceSearch());
-						n.setPreviousTransaction(n.getCustomerId()+"님 전 거래내역 (출금실패잔액부족)");
+						n.setPreviousTransaction("2020.11.10 출금실패잔액부족");
 						check = false;
 						break;
 					}					
 				}else {
 					System.out.println(id+"님 패스워드가 틀렸습니다");
-					check = false;
-					break;
 				}
 			}
 			check = true;
@@ -93,11 +92,22 @@ public class BankingApplication extends Acount{
 			System.out.println(n.getPreviousTransaction());
 		}
 	}
+	public static void infoUser() {
+
+	}	
+	public static void deleteUser() {
+
+	}
+
 	public static void menuInfo() {
 		System.out.println("1.계정생성");
 		System.out.println("2.입금");
 		System.out.println("3.출금");
 		System.out.println("4.전 거래내역");
-		System.out.println("5.exit");
+		System.out.println("5.계정삭제");
+		System.out.println("6.exit");
 	}
+
+
+
 }

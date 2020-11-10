@@ -28,10 +28,6 @@ public class BankMain {
 				case '4':
 					BankingApplication.previousTransaction(list);
 					break;
-				case '5':					
-					System.exit(0);
-					scan.close();
-					break;
 			}
 		}
 	}
