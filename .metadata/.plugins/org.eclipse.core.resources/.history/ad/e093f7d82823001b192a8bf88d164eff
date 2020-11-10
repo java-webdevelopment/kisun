@@ -7,8 +7,8 @@ public class BankingApplication extends Acount{
 	static Scanner scan = new Scanner(System.in);
 
 	public static void createId(List<Acount> list) {
+		Acount user = new Acount();
 		int count = 0;
-		Acount user = new Acount();		
 		user.userAdd();
 		list.add(user);
 		for(int i=0; i<list.size(); i++) {
@@ -17,6 +17,7 @@ public class BankingApplication extends Acount{
 				count++;
 			}
 		}
+		System.out.println(count);
 		if(count == 2) {
 			System.out.println("중복된 ID는 사용할수 없습니다.");
 			list.remove(user);

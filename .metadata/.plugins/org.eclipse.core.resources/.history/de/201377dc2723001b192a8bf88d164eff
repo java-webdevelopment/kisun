@@ -7,20 +7,19 @@ public class BankingApplication extends Acount{
 	static Scanner scan = new Scanner(System.in);
 
 	public static void createId(List<Acount> list) {
-		int count = 0;
-		Acount user = new Acount();		
+		Acount user = new Acount();
 		user.userAdd();
 		list.add(user);
 		for(int i=0; i<list.size(); i++) {
 			Acount n = list.get(i);
-			if(n.getCustomerId().equals(user.getCustomerId())) {
-				count++;
-			}
-		}
-		if(count == 2) {
-			System.out.println("중복된 ID는 사용할수 없습니다.");
-			list.remove(user);
-		}
+			System.out.println(n.getCustomerId());
+			System.out.println(user.getCustomerId());
+			if(user.getCustomerId().equals(n.getCustomerId())) {
+				
+			}else {
+				
+			}			
+		}		
 	}
 	public static void deposit(List<Acount> list) {
 		System.out.println("입금을 시작 합니다.");
