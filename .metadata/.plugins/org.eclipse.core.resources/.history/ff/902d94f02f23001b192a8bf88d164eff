@@ -100,18 +100,13 @@ public class BankingApplication extends Acount{
 	public static void previousTransaction(List<Acount> list) {
 		System.out.printf("전 거래 확인할 ID을 입력: ");
 		String id = scan.nextLine();
-		boolean check = false;
 		for(int i=0; i<list.size(); i++) {
 			Acount n = list.get(i);
 			if(n.getCustomerId().equals(id)) {
 				System.out.println(n.getPreviousTransaction());
-				check = false;
-				break;
+			}else {
+				System.out.println("없는 ID 입니다.");
 			}
-			check = true;
-		}
-		if(check) {
-			System.out.println(id+"는 없는 ID 입니다.");
 		}
 	}
 	public static void menuInfo() {

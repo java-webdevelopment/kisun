@@ -14,8 +14,10 @@ public class BankMain {
 			System.out.printf("메뉴 입력: ");
 			try {
 			String str = scan.nextLine();
-			int n = Integer.parseInt(str);
-			switch(n) {
+			char n = str.charAt(0);
+			String str1 = String.valueOf(n);
+			int m = Integer.parseInt(str1);
+			switch(m) {
 				case 1:
 					BankingApplication.createId(list);
 					break;
@@ -32,11 +34,9 @@ public class BankMain {
 					System.exit(0);
 					scan.close();
 					break;
-				default:
-					System.out.println("1~5까지 숫자만 입력해주세요");
 			}
 			}catch (Exception e) {
-				System.out.println("1~5까지 숫자만 입력해주세요");
+				System.out.println("숫자만 입력하세요");
 			}
 		}
 	}

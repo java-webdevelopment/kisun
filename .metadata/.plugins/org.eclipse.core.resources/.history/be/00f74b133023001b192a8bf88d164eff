@@ -111,7 +111,7 @@ public class BankingApplication extends Acount{
 			check = true;
 		}
 		if(check) {
-			System.out.println(id+"는 없는 ID 입니다.");
+			System.out.println("없는 ID 입니다.");
 		}
 	}
 	public static void menuInfo() {

@@ -14,8 +14,10 @@ public class BankMain {
 			System.out.printf("메뉴 입력: ");
 			try {
 			String str = scan.nextLine();
-			int n = Integer.parseInt(str);
-			switch(n) {
+			char n = str.charAt(0);
+			String str1 = String.valueOf(n);
+			int m = Integer.parseInt(str1);
+			switch(m) {
 				case 1:
 					BankingApplication.createId(list);
 					break;

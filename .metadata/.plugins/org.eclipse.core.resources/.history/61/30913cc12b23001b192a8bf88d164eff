@@ -14,29 +14,28 @@ public class BankMain {
 			System.out.printf("메뉴 입력: ");
 			try {
 			String str = scan.nextLine();
-			int n = Integer.parseInt(str);
+			str.toLowerCase();
+			char n = str.charAt(0);
 			switch(n) {
-				case 1:
+				case '1':
 					BankingApplication.createId(list);
 					break;
-				case 2:
+				case '2':
 					BankingApplication.deposit(list);
 					break;
-				case 3:
+				case '3':
 					BankingApplication.withdraw(list);
 					break;
-				case 4:
+				case '4':
 					BankingApplication.previousTransaction(list);
 					break;
-				case 5:					
+				case '5':					
 					System.exit(0);
 					scan.close();
 					break;
-				default:
-					System.out.println("1~5까지 숫자만 입력해주세요");
 			}
 			}catch (Exception e) {
-				System.out.println("1~5까지 숫자만 입력해주세요");
+				System.out.println("숫자만 입력하세요");
 			}
 		}
 	}
