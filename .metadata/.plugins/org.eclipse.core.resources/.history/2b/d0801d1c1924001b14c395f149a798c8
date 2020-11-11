@@ -9,6 +9,7 @@ public class BankingApplication extends Acount{
 	public static void createId(List<Acount> list) {
 		int count=0;
 		Acount user = new Acount();
+		System.out.println("user인스턴트 밑에"+count);
 		System.out.println("계정 생성을 시작합니다.");
 		System.out.printf("계정: ");
 		user.setCustomerId(scan.nextLine());
@@ -19,6 +20,7 @@ public class BankingApplication extends Acount{
 			Acount n = list.get(i);
 			if(n.getCustomerId().equals(user.getCustomerId())) {
 				count++;
+				System.out.println("if문 밑에"+count);
 			}
 		}
 		if(count >= 2) {
