@@ -8,17 +8,6 @@ public class Acount {
 	private int balance;
 	private String previousTransaction;
 	
-
-	private Scanner scan = new Scanner(System.in);
-	
-	public void userAdd() {
-		System.out.println("계정 생성을 시작합니다.");
-		System.out.printf("계정: ");
-		setCustomerId(scan.nextLine());
-		System.out.printf("패스워드: ");
-		setCustomerPw(scan.nextLine());
-	}
-
 	public int getAddBalance() {
 		return balance;
 	}

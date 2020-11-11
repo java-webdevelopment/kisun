@@ -7,17 +7,23 @@ public class BankingApplication extends Acount{
 	static Scanner scan = new Scanner(System.in);
 
 	public static void createId(List<Acount> list) {
-		int count = 0;
-		Acount user = new Acount();		
-		user.userAdd();
+		int count=0;
+		Acount user = new Acount();
+		System.out.println("user인스턴트 밑에"+count);
+		System.out.println("계정 생성을 시작합니다.");
+		System.out.printf("계정: ");
+		user.setCustomerId(scan.nextLine());
+		System.out.printf("패스워드: ");
+		user.setCustomerPw(scan.nextLine());
 		list.add(user);
 		for(int i=0; i<list.size(); i++) {
 			Acount n = list.get(i);
 			if(n.getCustomerId().equals(user.getCustomerId())) {
 				count++;
+				System.out.println("if문 밑에"+count);
 			}
 		}
-		if(count == 2) {
+		if(count >= 2) {
 			System.out.println("중복된 ID는 사용할수 없습니다.");
 			list.remove(user);
 		}
@@ -54,7 +60,6 @@ public class BankingApplication extends Acount{
 			System.out.println(id+"는 없는 ID 입니다.");
 		}
 	}		
-
 	public static void withdraw(List<Acount> list) {
 		System.out.println("출금을 시작 합니다.");
 		System.out.printf("이름: ");
